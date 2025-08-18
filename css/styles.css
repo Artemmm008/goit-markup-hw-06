@@ -378,6 +378,7 @@ transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)), url(../images/img11.jpg);
     background-repeat: no-repeat;
     background-position: center;
+    max-width: 320px;
     background-size: cover;
     margin: 0 auto;
 }
@@ -422,6 +423,7 @@ font-weight: 700;
   
 .start {
     padding: 96px 0;
+    max-width: 768px;
 }
 
   .start-title{
@@ -450,6 +452,7 @@ margin: 0 auto 36px;
         background-repeat: no-repeat;
         background-position: center;
         background-size: cover;
+        max-width: 1440px;
         margin: 0 auto;
     }
 
@@ -469,3 +472,92 @@ margin: 0 auto 36px;
         background-color: #404BBF;
     }
 }
+
+.mini-dot {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 72px;
+}
+
+.mini-dot .item {
+    width: 100%;
+}
+
+.mini-img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 112px;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom: 8px;
+    display: none;
+}
+
+.mini-title {
+    font-weight: 700;
+        font-size: 36px;
+        line-height: 1.11111;
+        letter-spacing: 0.02em;
+        text-align: center;
+        color: #2e2f42;
+    margin-bottom: 8px;
+}
+
+.mini-title-text {
+    font-weight: 500;
+        font-size: 16px;
+        line-height: 1.5;
+        letter-spacing: 0.02em;
+        color: #434455;
+    margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+
+.mini-dot {
+    gap: 72px 24px;
+}
+
+    .mini-dot .item {
+            width: calc((100% - 24px) / 2);
+        }
+}
+
+@media screen and (min-width: 1158px) {
+
+.mini-dot {
+        display: flex;
+        align-items: center;
+        gap: 24px;
+        flex-wrap: nowrap;
+    }
+
+    .mini-dot .item {
+            width: calc((100% - 72px) / 3);
+        }
+
+    .mini-img {
+        display: flex;
+    }
+
+        .mini-title {
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 1.2;
+            letter-spacing: 0.02em;
+            color: #2e2f42;
+            margin-bottom: 8px;
+        }
+    
+        .mini-title-text {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 1.5;
+            letter-spacing: 0.02em;
+            color: #434455;
+            margin: 0;
+        }
+}
+
